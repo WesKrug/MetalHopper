@@ -682,6 +682,7 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   moveDirection: 0
   allomanticVar: 0
+  r2d: {fileID: 0}
 --- !u!212 &1699070063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -783,10 +784,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetAnchor: {fileID: 1096104519}
-  cc: {fileID: 0}
+  cc: {fileID: 1699070062}
   AllomanticConstant: 10
   lastTapTime: 0
-  tapSpeed: 0.5
+  tapSpeed: 0.2
 --- !u!1 &1852252117
 GameObject:
   m_ObjectHideFlags: 0

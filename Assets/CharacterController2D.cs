@@ -16,9 +16,9 @@ public class CharacterController2D : MonoBehaviour
     bool facingRight = true;
     public float moveDirection = 0;
     bool isGrounded = false;
-    public float allomanticVar = 0;
+    public Vector2 allomanticVar = Vector2.zero;
     Vector3 cameraPos;
-    Rigidbody2D r2d;
+    public Rigidbody2D r2d;
     CapsuleCollider2D mainCollider;
     Transform t;
 
@@ -105,7 +105,7 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // Apply movement velocity
-        r2d.velocity = new Vector2(((moveDirection) * maxSpeed) + allomanticVar, r2d.velocity.y);
+        r2d.velocity = new Vector2(((moveDirection) * maxSpeed), r2d.velocity.y) + allomanticVar;
         // Simple debug
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, colliderRadius, 0), isGrounded ? Color.green : Color.red);
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(colliderRadius, 0, 0), isGrounded ? Color.green : Color.red);
